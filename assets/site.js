@@ -60,3 +60,10 @@ function drawElevation(el) {
   el.innerHTML = s + (el.dataset.cap ? '<div class="cap">' + el.dataset.cap + '</div>' : '');
 }
 document.querySelectorAll('.elev[data-spans]').forEach(drawElevation);
+
+// Email links are assembled in the browser so the plain address is not in the HTML (less spam from scrapers).
+document.querySelectorAll('a.mail[data-u]').forEach(function (a) {
+  var addr = a.dataset.u + '@' + a.dataset.d;
+  a.href = 'mailto:' + addr;
+  a.textContent = addr;
+});
