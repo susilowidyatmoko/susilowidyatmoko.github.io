@@ -19,10 +19,8 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - vendor/
-  - personal.html   # personal
-  - writing.html    # personal
-  - _posts          # personal
 
-# Personal section (journey + writing) is not published yet.
-# To publish: set personal_ready: true and delete the three lines marked "personal" under exclude.
-personal_ready: false
+# Personal pages (journey + writing) are password-protected.
+# Their plain sources live outside this public repo (susilowidyatmoko-private);
+# personal.html, writing.html and writing/ here are encrypted copies made by its build script.
+personal_ready: true

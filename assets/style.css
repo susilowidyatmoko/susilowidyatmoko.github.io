@@ -179,3 +179,9 @@ footer .inner span:first-child { margin-right: auto; }
   .drop .menu { display: inline-flex; position: static; border: none; box-shadow: none; background: none; padding: 0; min-width: 0; margin-left: 8px; }
   .drop .menu a { padding: 0 6px; font-size: 14px; color: var(--muted); }
 }
+
+/* password gate (encrypted personal pages) */
+.lock form { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 18px; }
+.lock input { font: inherit; padding: 8px 12px; border: 1px solid #cfc8bb; border-radius: 8px; background: #fff; min-width: 240px; }
+.lock button { font: inherit; font-weight: 600; padding: 8px 18px; border-radius: 8px; border: 1px solid var(--navy); background: var(--navy); color: #fff; cursor: pointer; }
+.lock .err { display: none; color: #b3261e; font-size: 14.5px; margin-top: 10px; }
