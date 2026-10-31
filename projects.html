@@ -4,7 +4,12 @@ title: Projects
 nav: projects
 ---
 <section>
-  <h2><span class="en">Featured projects</span><span class="id">Proyek unggulan</span></h2>
+  <p class="kicker"><span class="en">Projects</span><span class="id">Proyek</span></p>
+  <h1><span class="en">Special projects</span><span class="id">Proyek khusus</span></h1>
+  <p class="en">Balanced-cantilever, cable-stayed and arch bridges. <a href="#regular">Regular projects (prestressed girders) ↓</a></p>
+  <p class="id">Jembatan balanced cantilever, cable stay, dan pelengkung (arch). <a href="#regular">Proyek reguler (girder prategang) ↓</a></p>
+
+  <h2 style="margin-top:28px"><span class="en">Featured</span><span class="id">Unggulan</span></h2>
   <p class="muted en">Balanced-cantilever box-girder bridges in which I carried out the construction engineering services (CES) as design engineer at PT Delta Systech Indonesia. Elevations are schematic.</p>
   <p class="muted id">Jembatan box girder balanced cantilever yang construction engineering service (CES)-nya saya kerjakan sebagai design engineer di PT Delta Systech Indonesia. Gambar elevasi bersifat skematik.</p>
 
@@ -144,7 +149,7 @@ nav: projects
 </section>
 
 <section>
-  <h2><span class="en">Other projects</span><span class="id">Proyek lainnya</span></h2>
+  <h2><span class="en">Other special projects</span><span class="id">Proyek khusus lainnya</span></h2>
   <div class="table-wrap"><table class="proj">
     <tr>
       <th><span class="en">Project</span><span class="id">Proyek</span></th>
@@ -162,13 +167,13 @@ nav: projects
       <td>KSO Adhi–Duta–Jaya</td><td>2022–25</td>
       <td><span class="en">WIECON–contractor interface</span><span class="id">Penghubung WIECON–kontraktor</span></td></tr>
     <tr><td><span class="en">Jakarta–Bandung HSR</span><span class="id">Kereta Cepat Jakarta–Bandung</span></td>
-      <td>3× BC 48+80+48 / 32+48+32 m</td>
+      <td><span class="en">3× BC 48+80+48 / 32+48+32 m; external-tendon strengthening (2022)</span><span class="id">3× BC 48+80+48 / 32+48+32 m; perkuatan tendon eksternal (2022)</span></td>
       <td>WIKA</td><td>2020–22</td>
       <td><span class="en">WIECON–contractor interface, CES reviewer</span><span class="id">Penghubung WIECON–kontraktor, reviewer CES</span></td></tr>
     <tr><td>FO Cakung</td>
       <td><span class="en">Curved BC box 48.8+81+48.8 m, R 100 m</span><span class="id">BC box lengkung 48,8+81+48,8 m, R 100 m</span></td>
       <td>Adhi Karya</td><td>2020</td><td>CES</td></tr>
-    <tr><td>FO Martadinata<br><a class="badge" href="{{ '/personal.html#martadinata' | relative_url }}"><span class="en">my first BC project →</span><span class="id">proyek BC pertama saya →</span></a></td>
+    <tr><td>FO Martadinata{% if site.personal_ready %}<br><a class="badge" href="{{ '/personal.html#martadinata' | relative_url }}"><span class="en">my first BC project →</span><span class="id">proyek BC pertama saya →</span></a>{% endif %}</td>
       <td><span class="en">Curved BC 25.8+45.5+25.8 m, R 65 m</span><span class="id">BC lengkung 25,8+45,5+25,8 m, R 65 m</span></td>
       <td>Brantas Abipraya</td><td>2019</td><td>CES</td></tr>
     <tr><td>LRT Cikoko & Cililitan</td>
@@ -179,13 +184,28 @@ nav: projects
       <td><span class="en">Curved BC 48+77+48 m</span><span class="id">BC lengkung 48+77+48 m</span></td>
       <td>Tokyu–WIKA JO</td><td>2017–18</td>
       <td><span class="en">Project engineer, jacking & elongation reports</span><span class="id">Project engineer, laporan jacking & elongasi</span></td></tr>
-    <tr><td><span class="en">~60 prestressed girder projects</span><span class="id">±60 proyek girder prategang</span></td>
-      <td>I, U, box 20–50 m</td>
-      <td><span class="en">various</span><span class="id">berbagai</span></td><td>2016–</td>
-      <td><span class="en">Tendon design; jacking & elongation reports; shop drawings</span><span class="id">Desain tendon; laporan jacking & elongasi; shop drawing</span></td></tr>
   </table></div>
   <p class="muted small en">Pulau Laut, Pulau Balang and HSR: design and construction-engineering analysis by consultant WIECON; my role was the technical interface with the contractor.</p>
   <p class="muted small id">Pulau Laut, Pulau Balang, dan HSR: desain dan analisis construction engineering oleh konsultan WIECON; peran saya sebagai penghubung teknis dengan kontraktor.</p>
+</section>
+
+<section id="regular">
+  <h1><span class="en">Regular projects</span><span class="id">Proyek reguler</span></h1>
+  <p class="en">Prestressed concrete girders — PC-I, PC-U, PC-Box and PC-slab, typically 20–50 m — for bridges across Indonesia. My role: tendon design, jacking-force and elongation reports, and tendon shop drawings.</p>
+  <p class="id">Girder beton prategang — PC-I, PC-U, PC-Box, dan PC-slab, umumnya bentang 20–50 m — untuk jembatan di berbagai daerah di Indonesia. Peran saya: desain tendon, laporan gaya jacking dan elongasi, serta shop drawing tendon.</p>
+  <ul class="tags" style="margin-bottom:14px"><li>PC-I</li><li>PC-U</li><li>PC-Box</li><li>PC-slab</li></ul>
+  <div class="table-wrap"><table class="proj">
+    <tr>
+      <th style="width:90px"><span class="en">Year</span><span class="id">Tahun</span></th>
+      <th><span class="en">Projects</span><span class="id">Proyek</span></th>
+    </tr>
+    {% for g in site.data.regular_projects %}
+    <tr><td>{{ g.year }}</td>
+      <td><span class="en">{% for p in g.items %}{{ p.en }}{% unless forloop.last %}; {% endunless %}{% endfor %}</span><span class="id">{% for p in g.items %}{{ p.id }}{% unless forloop.last %}; {% endunless %}{% endfor %}</span></td></tr>
+    {% endfor %}
+  </table></div>
+  <p class="muted small en">Selected projects I handled personally; contractor or precast manufacturer in brackets.</p>
+  <p class="muted small id">Proyek terpilih yang saya tangani langsung; kontraktor atau produsen precast dalam kurung.</p>
 </section>
 
 {% include gallery.html section="projects" %}

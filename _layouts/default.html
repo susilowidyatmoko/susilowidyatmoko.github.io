@@ -16,6 +16,7 @@
     <a data-k="home" href="{{ '/' | relative_url }}"><span class="en">Home</span><span class="id">Beranda</span></a>
     <a data-k="projects" href="{{ '/projects.html' | relative_url }}"><span class="en">Projects</span><span class="id">Proyek</span></a>
     <a data-k="research" href="{{ '/research.html' | relative_url }}"><span class="en">Research</span><span class="id">Riset</span></a>
+    {% if site.personal_ready %}
     <div class="drop">
       <a data-k="personal" href="{{ '/personal.html' | relative_url }}">Personal <span class="caret">▾</span></a>
       <div class="menu">
@@ -23,6 +24,9 @@
         <a href="{{ '/writing.html' | relative_url }}"><span class="en">Writing</span><span class="id">Tulisan</span></a>
       </div>
     </div>
+    {% else %}
+    <a data-k="personal" href="{{ '/coming-soon.html' | relative_url }}">Personal</a>
+    {% endif %}
     <a data-k="tools" href="{{ '/tools/' | relative_url }}"><span class="en">Tools</span><span class="id">Tools</span></a>
   </div>
   <button class="lang-btn" type="button" aria-label="Switch language"><span class="en"><b>EN</b> | ID</span><span class="id">EN | <b>ID</b></span></button>

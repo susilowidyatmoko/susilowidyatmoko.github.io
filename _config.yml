@@ -19,3 +19,10 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - vendor/
+  - personal.html   # personal
+  - writing.html    # personal
+  - _posts          # personal
+
+# Personal section (journey + writing) is not published yet.
+# To publish: set personal_ready: true and delete the three lines marked "personal" under exclude.
+personal_ready: false

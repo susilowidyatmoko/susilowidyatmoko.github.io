@@ -1,0 +1,71 @@
+# Regular projects (prestressed girders), from the CV project list. id / en names.
+# Special projects (BC, cable-stayed, arch) are in projects.html.
+- year: "2025"
+  items:
+    - { id: "Balok uji skala penuh angkur DSI", en: "Full-scale anchorage test beam (DSI)" }
+    - { id: "Jetty Morowali (BRM Pile)", en: "Jetty Morowali (BRM Pile)" }
+- year: "2024"
+  items:
+    - { id: "Jembatan Aek Asahan", en: "Aek Asahan Bridge" }
+    - { id: "Jembatan External Road Overpass (BRM Pile)", en: "External Road Overpass Bridge (BRM Pile)" }
+    - { id: "Jembatan Gusig – Sp. Blusuh (BRM Pile)", en: "Gusig – Sp. Blusuh Bridge (BRM Pile)" }
+    - { id: "Jembatan PCI Balang, Kaltim (BRM Pile)", en: "PCI Balang Bridge, Kaltim (BRM Pile)" }
+    - { id: "Jembatan Sangatta (BRM Pile)", en: "Sangatta Bridge (BRM Pile)" }
+    - { id: "Jembatan SPAM Sepaku (BRM Pile)", en: "SPAM Sepaku Bridge (BRM Pile)" }
+    - { id: "Patimban 4 – PCU girder (Adhi Persada Beton)", en: "Patimban 4 – PCU girder (Adhi Persada Beton)" }
+    - { id: "Ramp RE Martadinata – girder", en: "Ramp RE Martadinata – girder" }
+- year: "2023"
+  items:
+    - { id: "Jembatan Air Urai Kecil, Bengkulu (Jaya Sentrikon)", en: "Air Urai Kecil Bridge, Bengkulu (Jaya Sentrikon)" }
+    - { id: "Jembatan Bengkulu (Jaya Sentrikon)", en: "Bengkulu Bridge (Jaya Sentrikon)" }
+    - { id: "Jembatan Peudada (Jaya Sentrikon)", en: "Peudada Bridge (Jaya Sentrikon)" }
+    - { id: "Jembatan Tarantang Salibawan (Jaya Sentrikon)", en: "Tarantang Salibawan Bridge (Jaya Sentrikon)" }
+    - { id: "Jembatan Sei Lagunda (Jaya Beton)", en: "Sei Lagunda Bridge (Jaya Beton)" }
+    - { id: "Jembatan Jaya Beton", en: "Jaya Beton Bridge" }
+    - { id: "Jembatan Beranda Nusantara IKN (BRM Pile)", en: "Beranda Nusantara IKN Bridge (BRM Pile)" }
+    - { id: "Jembatan Istana IKN (BRM Pile)", en: "Istana IKN Bridge (BRM Pile)" }
+    - { id: "Jembatan Jetty Kariangau (BRM Pile)", en: "Jetty Kariangau Bridge (BRM Pile)" }
+    - { id: "Jembatan SPAM Sepaku (BRM Pile)", en: "SPAM Sepaku Bridge (BRM Pile)" }
+    - { id: "Jembatan Girder Indonesia 1 & 2", en: "Girder Indonesia 1 & 2 Bridge" }
+    - { id: "Jembatan H.M. Yamin", en: "H.M. Yamin Bridge" }
+    - { id: "Jembatan Ngrukem", en: "Ngrukem Bridge" }
+    - { id: "Jembatan Sukatani", en: "Sukatani Bridge" }
+    - { id: "Jembatan Summarecon", en: "Summarecon Bridge" }
+    - { id: "Kantilever Bhinneka Tunggal Ika", en: "Kantilever Bhinneka Tunggal Ika" }
+    - { id: "Stasiun Pasar Pramuka (Jakon)", en: "Stasiun Pasar Pramuka (Jakon)" }
+    - { id: "Tol 6 Ruas Dalam Kota", en: "Tol 6 Ruas Dalam Kota" }
+- year: "2022"
+  items:
+    - { id: "Jembatan Damkar (Arkonin)", en: "Damkar Bridge (Arkonin)" }
+    - { id: "Jembatan Purworejo (Aneka Dharma Persada)", en: "Purworejo Bridge (Aneka Dharma Persada)" }
+    - { id: "Jembatan Kab. Wonosobo (Aneka Dharma Persada)", en: "Kab. Wonosobo Bridge (Aneka Dharma Persada)" }
+    - { id: "Jembatan Muja Muju (Aneka Dharma Persada)", en: "Muja Muju Bridge (Aneka Dharma Persada)" }
+    - { id: "Jembatan Karang Gading", en: "Karang Gading Bridge" }
+    - { id: "Jembatan Kuala Besar, Bengkulu", en: "Kuala Besar Bridge, Bengkulu" }
+    - { id: "Jembatan Siais, Tapanuli Selatan", en: "Siais Bridge, Tapanuli Selatan" }
+    - { id: "Jembatan Koto Tengah, Sungai Penuh", en: "Koto Tengah Bridge, Sungai Penuh" }
+    - { id: "Jembatan Muara Sako Tapan (Jaya Sentrikon)", en: "Muara Sako Tapan Bridge (Jaya Sentrikon)" }
+    - { id: "Jogja–Bawen (Adhi Persada Beton; PP Urban)", en: "Jogja–Bawen (Adhi Persada Beton; PP Urban)" }
+    - { id: "Pier Semarang–Demak", en: "Pier Semarang–Demak" }
+    - { id: "Tol Solo–Yogya (Aneka Dharma Persada)", en: "Tol Solo–Yogya (Aneka Dharma Persada)" }
+    - { id: "Jalan Tol IKN (BRM Pile)", en: "IKN Toll Road (BRM Pile)" }
+    - { id: "Trestle (BRM Pile)", en: "Trestle (BRM Pile)" }
+- year: "2021"
+  items:
+    - { id: "HSR Jakarta–Bandung P64–P67, P81–P84, simple span (WIKA); friction test", en: "HSR Jakarta–Bandung P64–P67, P81–P84, simple span (WIKA); friction test" }
+    - { id: "Jembatan Cijago–Cinere (PP)", en: "Cijago–Cinere Bridge (PP)" }
+    - { id: "Cisumdawu (PP)", en: "Cisumdawu (PP)" }
+    - { id: "Jembatan Bantul (Aneka Dharma Persada)", en: "Bantul Bridge (Aneka Dharma Persada)" }
+    - { id: "Jembatan Jalan Bilal (Jaya Sentrikon)", en: "Jalan Bilal Bridge (Jaya Sentrikon)" }
+    - { id: "Jembatan Muara Sako Tapan (Jaya Sentrikon)", en: "Muara Sako Tapan Bridge (Jaya Sentrikon)" }
+    - { id: "Jembatan Paluh Merbau (Jaya Sentrikon)", en: "Paluh Merbau Bridge (Jaya Sentrikon)" }
+    - { id: "Jembatan Solok Selatan (Jaya Sentrikon)", en: "Solok Selatan Bridge (Jaya Sentrikon)" }
+    - { id: "Jembatan Sp. Kampung Lalang (Jaya Sentrikon)", en: "Sp. Kampung Lalang Bridge (Jaya Sentrikon)" }
+    - { id: "Jembatan Telaga Tujuh (Jaya Sentrikon)", en: "Telaga Tujuh Bridge (Jaya Sentrikon)" }
+    - { id: "Jembatan Ruas Cipanas (Jaya Konstruksi)", en: "Ruas Cipanas Bridge (Jaya Konstruksi)" }
+    - { id: "Jembatan Penajam (BRM Pile)", en: "Penajam Bridge (BRM Pile)" }
+    - { id: "Pelabuhan Muara Angke", en: "Pelabuhan Muara Angke" }
+    - { id: "Piyungan", en: "Piyungan" }
+- year: "2018"
+  items:
+    - { id: "Jembatan Pipa Gas BSD", en: "BSD gas-pipe bridge" }

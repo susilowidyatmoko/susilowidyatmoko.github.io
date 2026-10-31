@@ -2,14 +2,15 @@
 layout: default
 nav: home
 ---
+{% if site.personal_ready %}{% assign personal = '/personal.html' %}{% else %}{% assign personal = '/coming-soon.html' %}{% endif %}
 <section class="hero">
   <div>
     <p class="kicker"><span class="en">Bridge engineer · FEM researcher</span><span class="id">Tenaga ahli jembatan · Peneliti FEM</span></p>
     <h1>Susilo Widyatmoko</h1>
     <p class="lead en">By day I help contractors build balanced-cantilever bridges, segment by segment, until both cantilevers meet. Beyond that, I study the theory inside the software we rely on: plate and shell finite elements.</p>
     <p class="lead id">Di siang hari saya membantu kontraktor membangun jembatan balanced cantilever, segmen demi segmen, sampai kedua kantilever bertemu. Di luar itu, saya mempelajari teori di balik software yang kita andalkan: elemen hingga plat dan shell.</p>
-    <p class="en">Design engineer at PT Delta Systech Indonesia since 2016 and doctoral student at Universitas Indonesia. The path here was not planned — <a href="{{ '/personal.html' | relative_url }}">read the story</a>.</p>
-    <p class="id">Design engineer di PT Delta Systech Indonesia sejak 2016 dan mahasiswa S3 di Universitas Indonesia. Jalannya tidak direncanakan — <a href="{{ '/personal.html' | relative_url }}">baca ceritanya</a>.</p>
+    <p class="en">Design engineer at PT Delta Systech Indonesia since 2016 and doctoral student at Universitas Indonesia. The path here was not planned — <a href="{{ personal | relative_url }}">read the story</a>.</p>
+    <p class="id">Design engineer di PT Delta Systech Indonesia sejak 2016 dan mahasiswa S3 di Universitas Indonesia. Jalannya tidak direncanakan — <a href="{{ personal | relative_url }}">baca ceritanya</a>.</p>
   </div>
   <img src="{{ '/assets/photo.jpg' | relative_url }}" alt="Susilo Widyatmoko">
 </section>
@@ -35,7 +36,7 @@ nav: home
       <p class="en">Locking-free plate and shell elements: the BAK and BKWH elements, published in IJNME.</p>
       <p class="id">Elemen plat dan shell bebas locking: elemen BAK dan BKWH, terbit di IJNME.</p>
     </a>
-    <a class="door" href="{{ '/personal.html' | relative_url }}">
+    <a class="door" href="{{ personal | relative_url }}">
       <div class="n">03</div>
       <h3>Personal</h3>
       <p class="en">The journey behind the work — and notes on camber, prestressing and FEM.</p>
