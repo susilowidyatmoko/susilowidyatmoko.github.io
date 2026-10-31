@@ -185,3 +185,21 @@ footer .inner span:first-child { margin-right: auto; }
 .lock input { font: inherit; padding: 8px 12px; border: 1px solid #cfc8bb; border-radius: 8px; background: #fff; min-width: 240px; }
 .lock button { font: inherit; font-weight: 600; padding: 8px 18px; border-radius: 8px; border: 1px solid var(--navy); background: var(--navy); color: #fff; cursor: pointer; }
 .lock .err { display: none; color: #b3261e; font-size: 14.5px; margin-top: 10px; }
+
+/* Personal area (journey, writing): warmer, more colourful palette so it reads as personal space */
+body[data-nav="personal"] {
+  --navy: #5b2a4e;    /* plum headings */
+  --ochre: #d4693a;   /* coral accents */
+  --line: #efcfbf;
+  --soft: #fbe3d6;
+  --paper: #fff5ee;
+  background: linear-gradient(165deg, #fff1e4 0%, #fde0cf 38%, #f9d6e0 72%, #efd9f0 100%) fixed;
+}
+body[data-nav="personal"] header.top { background: rgba(255, 241, 230, .88); border-bottom-color: #f0cdbb; }
+body[data-nav="personal"] footer { border-top-color: #f0cdbb; background: rgba(255, 255, 255, .25); }
+body[data-nav="personal"] .chapter.key,
+body[data-nav="personal"] .lock input,
+body[data-nav="personal"] .postitem { background: rgba(255, 255, 255, .55); }
+body[data-nav="personal"] .postitem { border-radius: 10px; padding: 16px 18px; margin-bottom: 10px; border: 1px solid var(--line); }
+body[data-nav="personal"] blockquote { color: #6b3a5c; }
+body[data-nav="personal"] .lang-btn { background: rgba(255, 255, 255, .7); border-color: var(--line); }
