@@ -1,23 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Research — Susilo Widyatmoko</title>
-<meta name="description" content="Doctoral research on plate and shell finite elements at Universitas Indonesia; BAK and BKWH elements, publications in IJNME.">
-<link rel="stylesheet" href="assets/style.css">
-</head>
-<body>
-<header class="top"><nav class="nav">
-  <a class="brand" href="index.html">Susilo Widyatmoko</a>
-  <a href="index.html"><span class="en">Home</span><span class="id">Beranda</span></a>
-  <a href="projects.html"><span class="en">Projects</span><span class="id">Proyek</span></a>
-  <a class="active" href="research.html"><span class="en">Research</span><span class="id">Riset</span></a>
-  <a href="index.html#contact"><span class="en">Contact</span><span class="id">Kontak</span></a>
-  <button class="lang-btn" type="button"><span class="en"><b>EN</b> | ID</span><span class="id">EN | <b>ID</b></span></button>
-</nav></header>
-
-<main>
+---
+layout: default
+title: Research
+nav: research
+---
 <section>
   <h2><span class="en">Research focus</span><span class="id">Fokus riset</span></h2>
   <p class="en">My doctoral research at Universitas Indonesia (2024 – present) develops efficient quadrilateral finite elements for plates and shells, valid for both thin and thick structures. The work covers linear and nonlinear analysis of isotropic, laminated composite and functionally graded material (FGM) shells, with formulations based on the free formulation concept and modified Hellinger–Reissner functionals to avoid shear and bending locking.</p>
@@ -65,12 +50,5 @@
     <a class="pending btn" href="#">ResearchGate <span class="todo">[link]</span></a>
   </div>
 </section>
-</main>
 
-<footer><div class="inner">
-  <span>© 2026 Susilo Widyatmoko</span>
-  <span>Indonesia</span>
-</div></footer>
-<script src="assets/site.js"></script>
-</body>
-</html>
+{% include gallery.html section="research" %}

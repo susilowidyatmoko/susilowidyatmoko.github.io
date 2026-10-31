@@ -1,0 +1,21 @@
+---
+layout: default
+title: Writing
+nav: personal
+---
+<section class="narrow">
+  <p class="kicker">Personal · <span class="en">Writing</span><span class="id">Tulisan</span></p>
+  <h1><span class="en">Notes from the desk and the site</span><span class="id">Catatan dari meja desain dan lapangan</span></h1>
+  <p class="muted en">Short, honest notes on camber, prestressing and finite elements. Each post is written in English or Indonesian.</p>
+  <p class="muted id">Catatan singkat dan jujur tentang camber, prategang, dan elemen hingga. Setiap tulisan ditulis dalam bahasa Indonesia atau Inggris.</p>
+  {% if site.posts.size > 0 %}
+  {% for post in site.posts %}
+  <div class="postitem">
+    <div class="title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a> <span class="badge">{{ post.lang | upcase }}</span></div>
+    <div class="muted small">{{ post.date | date: "%d %b %Y" }}{% if post.summary %} · {{ post.summary }}{% endif %}</div>
+  </div>
+  {% endfor %}
+  {% else %}
+  <div class="empty"><span class="en">The first post is on its way.</span><span class="id">Tulisan pertama sedang disiapkan.</span></div>
+  {% endif %}
+</section>

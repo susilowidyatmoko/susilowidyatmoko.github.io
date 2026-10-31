@@ -1,0 +1,101 @@
+---
+layout: default
+title: Tendon elongation calculator
+nav: tools
+description: Friction losses and theoretical elongation of a post-tensioning tendon, segment by segment.
+---
+<section class="narrow">
+  <p class="kicker">Tools</p>
+  <h1><span class="en">Tendon elongation calculator</span><span class="id">Kalkulator elongasi tendon</span></h1>
+  <p class="en">Force along a tendon stressed from one end, with friction from curvature (μ) and wobble (k), and the resulting theoretical elongation. Enter the tendon as straight and curved segments, starting at the live (jacking) end.</p>
+  <p class="id">Gaya sepanjang tendon yang di-stressing dari satu ujung, dengan gesekan akibat kelengkungan (μ) dan wobble (k), serta elongasi teoretisnya. Masukkan tendon sebagai segmen lurus dan lengkung, dimulai dari ujung hidup (jacking).</p>
+</section>
+
+<div class="calc narrow" id="calc">
+  <div class="row">
+    <label><span class="en">Number of strands</span><span class="id">Jumlah strand</span><input id="n" type="number" value="19" min="1" step="1"></label>
+    <label><span class="en">Area per strand (mm²)</span><span class="id">Luas per strand (mm²)</span><input id="as" type="number" value="140" step="0.1"></label>
+    <label>f<sub>pu</sub> (MPa)<input id="fpu" type="number" value="1860"></label>
+    <label><span class="en">Jacking stress / f<sub>pu</sub></span><span class="id">Tegangan jacking / f<sub>pu</sub></span><input id="r" type="number" value="0.75" step="0.01"></label>
+    <label>E<sub>p</sub> (MPa)<input id="ep" type="number" value="195000"></label>
+    <label><span class="en">Curvature friction μ</span><span class="id">Gesekan kelengkungan μ</span><input id="mu" type="number" value="0.20" step="0.01"></label>
+    <label><span class="en">Wobble k (1/m)</span><span class="id">Wobble k (1/m)</span><input id="k" type="number" value="0.002" step="0.0001"></label>
+  </div>
+
+  <table>
+    <thead><tr>
+      <th><span class="en">Segment</span><span class="id">Segmen</span></th>
+      <th><span class="en">Length (m)</span><span class="id">Panjang (m)</span></th>
+      <th><span class="en">Angle change (°)</span><span class="id">Perubahan sudut (°)</span></th>
+      <th><span class="en">Force at end (kN)</span><span class="id">Gaya di ujung (kN)</span></th>
+      <th>ΔL (mm)</th>
+      <th></th>
+    </tr></thead>
+    <tbody id="segs"></tbody>
+  </table>
+  <button class="linkbtn" id="add" type="button"><span class="en">+ add segment</span><span class="id">+ tambah segmen</span></button>
+
+  <div class="result">
+    <div><span class="en">Jacking force P<sub>0</sub></span><span class="id">Gaya jacking P<sub>0</sub></span><b id="o-p0">–</b></div>
+    <div><span class="en">Force at dead end</span><span class="id">Gaya di ujung mati</span><b id="o-pend">–</b></div>
+    <div><span class="en">Friction loss</span><span class="id">Kehilangan gesekan</span><b id="o-loss">–</b></div>
+    <div><span class="en">Theoretical elongation</span><span class="id">Elongasi teoretis</span><b id="o-dl">–</b></div>
+  </div>
+
+  <div class="note">
+    <div class="en"><b>Method.</b> P(x) = P<sub>0</sub>·e<sup>−(μα + kx)</sup>, with α the cumulative angle change (rad) and x the distance from the jacking end. Each segment's elongation uses its average force: ΔL<sub>i</sub> = P<sub>i,avg</sub>·L<sub>i</sub> / (A<sub>p</sub>·E<sub>p</sub>). Not included: anchor set (wedge draw-in), elastic shortening, long-term losses, and the length inside the jack. Defaults are examples only — use the friction coefficients and E<sub>p</sub> specified for your project. For education and quick checks, not a substitute for project calculations.</div>
+    <div class="id"><b>Metode.</b> P(x) = P<sub>0</sub>·e<sup>−(μα + kx)</sup>, dengan α perubahan sudut kumulatif (rad) dan x jarak dari ujung jacking. Elongasi tiap segmen memakai gaya rata-ratanya: ΔL<sub>i</sub> = P<sub>i,rata</sub>·L<sub>i</sub> / (A<sub>p</sub>·E<sub>p</sub>). Belum termasuk: slip angkur (wedge draw-in), perpendekan elastis, kehilangan jangka panjang, dan panjang di dalam jack. Nilai bawaan hanya contoh — gunakan koefisien gesekan dan E<sub>p</sub> sesuai spesifikasi proyek. Untuk edukasi dan pengecekan cepat, bukan pengganti perhitungan proyek.</div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var segs = [[2, 0], [8, 12], [30, 0], [8, 12], [2, 0]];   // example: straight-curve-straight-curve-straight
+  var tb = document.getElementById('segs');
+  var $ = function (id) { return document.getElementById(id); };
+  var f1 = function (v) { return v.toLocaleString('en-US', { maximumFractionDigits: 1, minimumFractionDigits: 1 }); };
+
+  function render() {
+    tb.innerHTML = segs.map(function (s, i) {
+      return '<tr><td>' + (i + 1) + '</td>' +
+        '<td><input type="number" step="0.1" value="' + s[0] + '" data-i="' + i + '" data-j="0"></td>' +
+        '<td><input type="number" step="0.5" value="' + s[1] + '" data-i="' + i + '" data-j="1"></td>' +
+        '<td class="pe"></td><td class="dl"></td>' +
+        '<td><button class="linkbtn" type="button" data-del="' + i + '" style="margin:0;border:none">×</button></td></tr>';
+    }).join('');
+    calc();
+  }
+
+  function calc() {
+    var ap = $('n').value * $('as').value;                // mm²
+    var p0 = $('r').value * $('fpu').value * ap / 1000;   // kN
+    var ep = +$('ep').value, mu = +$('mu').value, k = +$('k').value;
+    var p = p0, total = 0, rows = tb.querySelectorAll('tr');
+    segs.forEach(function (s, i) {
+      var L = +s[0], a = mu * (+s[1] * Math.PI / 180) + k * L;
+      var pavg = a > 1e-9 ? p * (1 - Math.exp(-a)) / a : p;
+      var dl = pavg * 1000 * L * 1000 / (ap * ep);         // mm
+      p = p * Math.exp(-a);
+      total += dl;
+      rows[i].querySelector('.pe').textContent = f1(p);
+      rows[i].querySelector('.dl').textContent = f1(dl);
+    });
+    $('o-p0').textContent = f1(p0) + ' kN';
+    $('o-pend').textContent = f1(p) + ' kN';
+    $('o-loss').textContent = f1(100 * (1 - p / p0)) + ' %';
+    $('o-dl').textContent = f1(total) + ' mm';
+  }
+
+  document.getElementById('calc').addEventListener('input', function (e) {
+    var t = e.target;
+    if (t.dataset.i !== undefined) segs[t.dataset.i][t.dataset.j] = t.value;
+    calc();
+  });
+  tb.addEventListener('click', function (e) {
+    var d = e.target.dataset.del;
+    if (d !== undefined && segs.length > 1) { segs.splice(d, 1); render(); }
+  });
+  $('add').addEventListener('click', function () { segs.push([10, 0]); render(); });
+  render();
+})();
+</script>

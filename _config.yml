@@ -1,0 +1,21 @@
+title: Susilo Widyatmoko
+description: Bridge engineer and shell finite-element researcher — balanced-cantilever construction engineering, post-tensioning, plate and shell elements.
+url: https://susilowidyatmoko.github.io
+baseurl: ""
+lang: en
+
+markdown: kramdown
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+defaults:
+  - scope: { path: "", type: posts }
+    values: { layout: post, nav: personal, permalink: "/writing/:year/:title/" }
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor/

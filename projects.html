@@ -1,23 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Projects — Susilo Widyatmoko</title>
-<meta name="description" content="Balanced-cantilever and post-tensioned bridge projects: construction engineering services, camber control, jacking and elongation.">
-<link rel="stylesheet" href="assets/style.css">
-</head>
-<body>
-<header class="top"><nav class="nav">
-  <a class="brand" href="index.html">Susilo Widyatmoko</a>
-  <a href="index.html"><span class="en">Home</span><span class="id">Beranda</span></a>
-  <a class="active" href="projects.html"><span class="en">Projects</span><span class="id">Proyek</span></a>
-  <a href="research.html"><span class="en">Research</span><span class="id">Riset</span></a>
-  <a href="index.html#contact"><span class="en">Contact</span><span class="id">Kontak</span></a>
-  <button class="lang-btn" type="button"><span class="en"><b>EN</b> | ID</span><span class="id">EN | <b>ID</b></span></button>
-</nav></header>
-
-<main>
+---
+layout: default
+title: Projects
+nav: projects
+---
 <section>
   <h2><span class="en">Featured projects</span><span class="id">Proyek unggulan</span></h2>
   <p class="muted en">Balanced-cantilever box-girder bridges in which I carried out the construction engineering services (CES) as design engineer at PT Delta Systech Indonesia. Elevations are schematic.</p>
@@ -183,7 +168,7 @@
     <tr><td>FO Cakung</td>
       <td><span class="en">Curved BC box 48.8+81+48.8 m, R 100 m</span><span class="id">BC box lengkung 48,8+81+48,8 m, R 100 m</span></td>
       <td>Adhi Karya</td><td>2020</td><td>CES</td></tr>
-    <tr><td>FO Martadinata</td>
+    <tr><td>FO Martadinata<br><a class="badge" href="{{ '/personal.html#martadinata' | relative_url }}"><span class="en">my first BC project →</span><span class="id">proyek BC pertama saya →</span></a></td>
       <td><span class="en">Curved BC 25.8+45.5+25.8 m, R 65 m</span><span class="id">BC lengkung 25,8+45,5+25,8 m, R 65 m</span></td>
       <td>Brantas Abipraya</td><td>2019</td><td>CES</td></tr>
     <tr><td>LRT Cikoko & Cililitan</td>
@@ -202,12 +187,5 @@
   <p class="muted small en">Pulau Laut, Pulau Balang and HSR: design and construction-engineering analysis by consultant WIECON; my role was the technical interface with the contractor.</p>
   <p class="muted small id">Pulau Laut, Pulau Balang, dan HSR: desain dan analisis construction engineering oleh konsultan WIECON; peran saya sebagai penghubung teknis dengan kontraktor.</p>
 </section>
-</main>
 
-<footer><div class="inner">
-  <span>© 2026 Susilo Widyatmoko</span>
-  <span>Indonesia</span>
-</div></footer>
-<script src="assets/site.js"></script>
-</body>
-</html>
+{% include gallery.html section="projects" %}

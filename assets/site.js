@@ -1,3 +1,13 @@
+// Highlight the current section in the nav (body data-nav set by the layout).
+(function () {
+  var k = document.body.dataset.nav;
+  var a = k && document.querySelector('.nav .links a[data-k="' + k + '"]');
+  if (a) a.classList.add('active');
+  document.querySelectorAll('.drop .menu a').forEach(function (m) {
+    if (m.pathname === location.pathname) m.classList.add('current');
+  });
+})();
+
 // Language switch (EN default, choice remembered) and schematic bridge elevations.
 (function () {
   var root = document.documentElement;

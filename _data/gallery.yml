@@ -1,0 +1,10 @@
+# Gallery photos: put the image in assets/gallery/ and add an entry here.
+# section decides where it appears: projects | research | personal
+# A page shows its gallery only when it has at least one photo.
+# Use only your own photos, without client documents or logos.
+#
+# - file: sedyatmo-closure.jpg
+#   section: projects
+#   en: Sedyatmo Ramp 1 — midspan closure, 2025
+#   id: Sedyatmo Ramp 1 — closure tengah bentang, 2025
+[]

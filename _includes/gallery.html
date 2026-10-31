@@ -1,0 +1,15 @@
+{% comment %} Photos from _data/gallery.yml whose `section` matches include.section (projects | research | personal). {% endcomment %}
+{% assign photos = site.data.gallery | where: "section", include.section %}
+{% if photos.size > 0 %}
+<section id="gallery">
+  <h2><span class="en">Gallery</span><span class="id">Galeri</span></h2>
+  <div class="gallery">
+    {% for g in photos %}
+    <figure>
+      <img src="{{ '/assets/gallery/' | append: g.file | relative_url }}" alt="{{ g.en }}" loading="lazy">
+      <figcaption><span class="en">{{ g.en }}</span><span class="id">{{ g.id | default: g.en }}</span></figcaption>
+    </figure>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}

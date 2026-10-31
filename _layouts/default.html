@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% if page.title %}{{ page.title }} — {% endif %}{{ site.title }}</title>
+<meta name="description" content="{{ page.description | default: site.description }}">
+<link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
+<script>if (localStorage.getItem('lang') === 'id') document.documentElement.classList.add('lang-id');</script>
+{% feed_meta %}
+</head>
+<body data-nav="{{ page.nav }}">
+<header class="top"><nav class="nav">
+  <a class="brand" href="{{ '/' | relative_url }}">Susilo Widyatmoko</a>
+  <div class="links">
+    <a data-k="home" href="{{ '/' | relative_url }}"><span class="en">Home</span><span class="id">Beranda</span></a>
+    <a data-k="projects" href="{{ '/projects.html' | relative_url }}"><span class="en">Projects</span><span class="id">Proyek</span></a>
+    <a data-k="research" href="{{ '/research.html' | relative_url }}"><span class="en">Research</span><span class="id">Riset</span></a>
+    <div class="drop">
+      <a data-k="personal" href="{{ '/personal.html' | relative_url }}">Personal <span class="caret">▾</span></a>
+      <div class="menu">
+        <a href="{{ '/personal.html' | relative_url }}"><span class="en">Journey</span><span class="id">Perjalanan</span></a>
+        <a href="{{ '/writing.html' | relative_url }}"><span class="en">Writing</span><span class="id">Tulisan</span></a>
+      </div>
+    </div>
+    <a data-k="tools" href="{{ '/tools/' | relative_url }}"><span class="en">Tools</span><span class="id">Tools</span></a>
+  </div>
+  <button class="lang-btn" type="button" aria-label="Switch language"><span class="en"><b>EN</b> | ID</span><span class="id">EN | <b>ID</b></span></button>
+</nav></header>
+
+<main>
+{{ content }}
+</main>
+
+<footer><div class="inner">
+  <span>© 2026 Susilo Widyatmoko</span>
+  <span><span class="en">Bridge engineer · FEM researcher · Indonesia</span><span class="id">Tenaga ahli jembatan · Peneliti FEM · Indonesia</span></span>
+</div></footer>
+<script src="{{ '/assets/site.js' | relative_url }}"></script>
+</body>
+</html>
